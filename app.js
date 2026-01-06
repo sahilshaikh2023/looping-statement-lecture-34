@@ -1,16 +1,33 @@
-//  the queation is that having th ask  the user password and access the status 
-let password = "mynameisSahil";
+// this time now the using the while condition for allow only 
+// 3 attempt to enter the correct password , if user get it right early stop 
+// if not , account is locked 
 
-let pass = prompt("enter the password ");
+let attempt = 0 ;
+let khulgaya  =  false  ;
+let pass =  "Sahilbhai";
 
-if (pass == null) {
-    console.error("Enter the password please ");
+let password = prompt("password batao.... ");
+attempt++;
+
+if( password === pass ){
+    khulgaya= true;
+
+
 }
-else{
-     if (pass === "mynameisSahil") {
-    console.log("Password Matched");
+
+while (password !== pass ){
+    if (attempt === 3){
+        console.error ("Account Locked ");
+        break;
+    }
+    password =prompt ("password batao");
+    if (password === pass )
+        khulgaya = true;
+    attempt++;
+
+
+
 }
-else {
-    console.log(" password not matched");
-}   
+if (khulgaya===true){
+    console.log("Acccount is opened");
 }
