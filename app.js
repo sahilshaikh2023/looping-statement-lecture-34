@@ -1,12 +1,16 @@
-let count = 0 ;
+//  the queation is that having th ask  the user password and access the status 
+let password = "mynameisSahil";
 
-for ( let i=1 ; i<=15 ; i++)
-{
+let pass = prompt("enter the password ");
 
-    if( i>8)
-    {
-        count++;
-        console.log (i);
-    }
+if (pass == null) {
+    console.error("Enter the password please ");
 }
-console.log(`The total count is ${count}`);
+else{
+     if (pass === "mynameisSahil") {
+    console.log("Password Matched");
+}
+else {
+    console.log(" password not matched");
+}   
+}
